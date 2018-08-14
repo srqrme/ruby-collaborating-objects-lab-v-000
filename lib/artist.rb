@@ -32,7 +32,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    self.find(name) || self.create(name)
+    self.find(name).uniq || self.create(name).uniq
   end
 
   def print_songs
