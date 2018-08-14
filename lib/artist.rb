@@ -16,6 +16,7 @@ class Artist
   def songs
     Song.find_by_artist(self)
   end
+  
   def add_song(song)
     @songs << song
   end
