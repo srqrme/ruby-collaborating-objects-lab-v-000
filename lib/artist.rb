@@ -22,14 +22,6 @@ class Artist
     end
 
   def self.find(name)
-    self.all.find{|artist| artist.name == name}
-  end
-
-  def self.create(name)
-    artist = self.new(name)
-  end
-
-  def self.find(name)
     self.all.find {|artist| artist.name == artist}
   end
 
