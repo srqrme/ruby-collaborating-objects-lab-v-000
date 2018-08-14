@@ -13,10 +13,10 @@ class Song
   end
 
   def self.new_by_filename(filename)
-    artist, song = filename.split(" - ")
-    new_song = self.new(song)
-    new_song.artist_name = artist
-    new_song
+    song = file.chomp(".mp3").split(" - ")
+    newsong = Song.new(song[1])
+    newsong.artist_name = song[0]
+    newsong
   end
 
   def self.find_by_artist(artist)
